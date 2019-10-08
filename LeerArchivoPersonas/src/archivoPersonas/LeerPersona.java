@@ -49,7 +49,7 @@ public static LinkedList <Persona> getPersona(String miArchivo) throws FileNotFo
 		sc.close();
 		return list;
 	}
-
+//habria que cambiar nombre de metodo por getPersonaOrdenadoPorDni
 public static  LinkedList<Persona> getPersonaOrdenado(LinkedList<Persona> list) throws IOException {
 	
 	LinkedList <Persona> ordenadasPorDni=new LinkedList <Persona>();
