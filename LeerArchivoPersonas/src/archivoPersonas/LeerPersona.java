@@ -7,7 +7,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -49,8 +51,8 @@ public static LinkedList <Persona> getPersona(String miArchivo) throws FileNotFo
 		sc.close();
 		return list;
 	}
-//habria que cambiar nombre de metodo por getPersonaOrdenadoPorDni
-public static  LinkedList<Persona> getPersonaOrdenado(LinkedList<Persona> list) throws IOException {
+
+public static  LinkedList<Persona> getPersonaOrdenadoPorDni(LinkedList<Persona> list) throws IOException {
 	
 	LinkedList <Persona> ordenadasPorDni=new LinkedList <Persona>();
 	Collections.sort(list);
@@ -67,5 +69,48 @@ public static  LinkedList<Persona> getPersonaOrdenado(LinkedList<Persona> list) 
 	return ordenadasPorDni;
 	
 }
+
+
+public static  LinkedList<Persona> getPersonaOrdenadoPorEdad(LinkedList<Persona> list) throws IOException {
+	
+	LinkedList <Persona> ordenadasPorEdad=new LinkedList <Persona>();
+	Collections.sort(list, new OrdenarPersonasPorEdad());
+	
+
+	for(Persona p : list) {
+	ordenadasPorEdad.add(p);}
+	
+	PrintWriter salida=new PrintWriter(new FileWriter("personasOrdenadasPorEdad.out"));
+	for(Persona p : ordenadasPorEdad) {
+		salida.println(p);
+	}
+	
+	salida.close();
+	
+	return ordenadasPorEdad;
+	
+}
+
+public static  LinkedList<Persona> getPersonasMayoresAedad(LinkedList<Persona> list, int edad) throws IOException {
+	
+	LinkedList <Persona> mayoresAedad=new LinkedList <Persona>();
+	
+	
+
+	for(Persona p : list) {
+		if(p.getEdad()>edad) {
+	mayoresAedad.add(p);}}
+	
+	PrintWriter salida=new PrintWriter(new FileWriter("mayoresAedad.out"));
+	for(Persona p : mayoresAedad) {
+		salida.println(p);
+	}
+	
+	salida.close();
+	
+	return mayoresAedad;
+	
+}
+
 
 }

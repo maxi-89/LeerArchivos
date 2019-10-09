@@ -14,9 +14,15 @@ public class TestPersona {
 		list1=LeerPersona.getPersona("personas.in");
 		
 		
-		LeerPersona.getPersonaOrdenado(list1);
+		LeerPersona.getPersonaOrdenadoPorDni(list1);
 		
-		System.out.println(LeerPersona.getPersonaOrdenado(list1));
+		//System.out.println(LeerPersona.getPersonaOrdenadoPorDni(list1));
+		
+		
+		
+		System.out.println(LeerPersona.getPersonaOrdenadoPorEdad(list1));
+		
+		//System.out.println(LeerPersona.getPersonasMayoresAedad(list1, 38));
 		
 	}
 

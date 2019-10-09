@@ -1,165 +1,110 @@
-Persona [edad=35
-, dni=13554552
-, apellido=Jovanovich]
-Persona [edad=26
-, dni=18861210
-, apellido=Villca]
-Persona [edad=38
-, dni=26816082
-, apellido=Veljacic]
-Persona [edad=26
-, dni=26942727
-, apellido=Esposito]
-Persona [edad=40
-, dni=27302142
-, apellido=Canteros]
-Persona [edad=30
-, dni=28408106
-, apellido=Avendaño]
-Persona [edad=27
-, dni=29130380
-, apellido=Correa]
-Persona [edad=22
-, dni=29477936
-, apellido=Francischini]
-Persona [edad=25
-, dni=30513994
-, apellido=Caruso]
-Persona [edad=38
-, dni=30603450
-, apellido=Vinci]
-Persona [edad=38
-, dni=31464233
-, apellido=Frigerio]
-Persona [edad=36
-, dni=31604852
-, apellido=Grau]
-Persona [edad=29
-, dni=32236740
-, apellido=Ubillos]
-Persona [edad=23
-, dni=32419830
-, apellido=Bellana]
-Persona [edad=37
-, dni=32605380
-, apellido=Elizagoyen]
-Persona [edad=26
-, dni=32616493
-, apellido=Alonso]
-Persona [edad=26
-, dni=32631539
-, apellido=Gonzalez]
-Persona [edad=25
-, dni=32757425
-, apellido=PerezAledda]
-Persona [edad=39
-, dni=32760802
-, apellido=Iglesias]
-Persona [edad=21
-, dni=32790866
-, apellido=Moreno]
-Persona [edad=38
-, dni=32980931
-, apellido=Castillo]
-Persona [edad=32
-, dni=33116287
-, apellido=Guido]
-Persona [edad=32
-, dni=33423119
-, apellido=Coronado]
-Persona [edad=21
-, dni=33786091
-, apellido=Vera]
-Persona [edad=28
-, dni=33907663
-, apellido=Gualco]
-Persona [edad=20
-, dni=34098790
-, apellido=Baravalle]
-Persona [edad=25
-, dni=34375738
-, apellido=Occhi]
-Persona [edad=34
-, dni=34412028
-, apellido=Ayvar]
-Persona [edad=37
-, dni=35204681
-, apellido=Benitez]
-Persona [edad=37
-, dni=35368160
-, apellido=Gonzalez]
-Persona [edad=27
-, dni=35532465
-, apellido=PinEtchave]
-Persona [edad=25
-, dni=35951783
-, apellido=Santelli]
-Persona [edad=25
-, dni=35974947
-, apellido=Aranda]
-Persona [edad=32
-, dni=36087949
-, apellido=Bravo]
-Persona [edad=30
-, dni=36166857
-, apellido=Cela]
-Persona [edad=27
-, dni=36178904
-, apellido=Gomez]
-Persona [edad=23
-, dni=36714588
-, apellido=Perazzo]
-Persona [edad=21
-, dni=36900375
-, apellido=Ocampo]
-Persona [edad=36
-, dni=37113832
-, apellido=Toloza]
-Persona [edad=27
-, dni=37273740
-, apellido=Santise]
-Persona [edad=25
-, dni=37542331
-, apellido=Albarracín]
-Persona [edad=40
-, dni=37605721
-, apellido=Allegretti]
-Persona [edad=24
-, dni=37649546
-, apellido=Ledesma]
-Persona [edad=34
-, dni=37753908
-, apellido=Rodeiro]
-Persona [edad=32
-, dni=37754713
-, apellido=Iseñ]
-Persona [edad=36
-, dni=37792163
-, apellido=Martin]
-Persona [edad=34
-, dni=37864636
-, apellido=Amato]
-Persona [edad=39
-, dni=37864860
-, apellido=Ali]
-Persona [edad=23
-, dni=38010118
-, apellido=TurkoSoto]
-Persona [edad=29
-, dni=38028213
-, apellido=Crosta]
-Persona [edad=30
-, dni=38031617
-, apellido=Accerboni]
-Persona [edad=30
-, dni=38142213
-, apellido=Gobbi]
-Persona [edad=37
-, dni=38200327
-, apellido=Benini]
-Persona [edad=24
-, dni=38380227
-, apellido=Menichetti]
-Persona [edad=26
-, dni=41450508
-, apellido=Chicchi]
+Jovanovich; 13554552; 35
+
+Villca; 18861210; 26
+
+Veljacic; 26816082; 38
+
+Esposito; 26942727; 26
+
+Canteros; 27302142; 40
+
+Avendaño; 28408106; 30
+
+Correa; 29130380; 27
+
+Francischini; 29477936; 22
+
+Caruso; 30513994; 25
+
+Vinci; 30603450; 38
+
+Frigerio; 31464233; 38
+
+Grau; 31604852; 36
+
+Ubillos; 32236740; 29
+
+Bellana; 32419830; 23
+
+Elizagoyen; 32605380; 37
+
+Alonso; 32616493; 26
+
+Gonzalez; 32631539; 26
+
+PerezAledda; 32757425; 25
+
+Iglesias; 32760802; 39
+
+Moreno; 32790866; 21
+
+Castillo; 32980931; 38
+
+Guido; 33116287; 32
+
+Coronado; 33423119; 32
+
+Vera; 33786091; 21
+
+Gualco; 33907663; 28
+
+Baravalle; 34098790; 20
+
+Occhi; 34375738; 25
+
+Ayvar; 34412028; 34
+
+Benitez; 35204681; 37
+
+Gonzalez; 35368160; 37
+
+PinEtchave; 35532465; 27
+
+Santelli; 35951783; 25
+
+Aranda; 35974947; 25
+
+Bravo; 36087949; 32
+
+Cela; 36166857; 30
+
+Gomez; 36178904; 27
+
+Perazzo; 36714588; 23
+
+Ocampo; 36900375; 21
+
+Toloza; 37113832; 36
+
+Santise; 37273740; 27
+
+Albarracín; 37542331; 25
+
+Allegretti; 37605721; 40
+
+Ledesma; 37649546; 24
+
+Rodeiro; 37753908; 34
+
+Iseñ; 37754713; 32
+
+Martin; 37792163; 36
+
+Amato; 37864636; 34
+
+Ali; 37864860; 39
+
+TurkoSoto; 38010118; 23
+
+Crosta; 38028213; 29
+
+Accerboni; 38031617; 30
+
+Gobbi; 38142213; 30
+
+Benini; 38200327; 37
+
+Menichetti; 38380227; 24
+
+Chicchi; 41450508; 26
+
