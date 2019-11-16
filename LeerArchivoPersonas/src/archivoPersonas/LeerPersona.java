@@ -1,7 +1,5 @@
 package archivoPersonas;
 
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -13,52 +11,18 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
-
-
+import java.util.TreeMap;
 
 public class LeerPersona {
-	
-	/**
-	 * Actividad Obligatoria para el portafolio 2019 (ambos turnos)
-Colecciones - Archivos - Entrada/Salida - Excepciones.
-
-Implementar un método estático getPersonas que reciba el nombre de un archivo “personas.in” y 
-devuelva un objeto LinkedList<Persona> con personas que fueron leídas del archivo de texto con
- formato: dni apellido edad (tres campos separados por un espacio en blanco). 
-Implementar un método estático getPersonasOrdenadasPorDni que reciba un objeto LinkedList<Persona>
- y devuelva otro objeto LinkedList<Persona> con las personas ordenadas por DNI. Generar el archivo
-  “personaOrdenadas.out” con el contenido del resultado obtenido. 
-Implementar un método estático getPersonasMayoresAEdad que reciba un objeto LinkedList<Persona> y 
-una edad y devuelva otro objeto LinkedList<Persona> con las personas cuyas edades son mayores a esa edad. 
-Generar el archivo “personaMayores.out” con el contenido del resultado obtenido. 
-Sobreescribir los métodos:
-equals de Object para determinar que dos objetos personas son iguales si sus dni´s son iguales.
-toString de Object para aplanar el objeto a una cadena que contiene los colaboradores internos 
-del objeto separado por “;”.
-Implementar un método estático listarPersonas que reciba por parámetro un objeto 
-
-
-LinkedList<Persona> y un String (que será el nombre del archivo de salida). 
- Usar este método para generar los archivos “personaOrdenadasPorDni.out” y “personasMayores.out”
-  a partir los LinkedList<Persona> obtenidos en los  puntos 2 y 3. Tenga en cuenta que para ésto,
-   deberá sobreescribir el método toString de Object para aplanar el objeto Persona a una cadena
-    que contiene los colaboradores internos del objeto separado por “;”.
-
-Resolver el problema “Descubriendo nombres repetidos" aplicando Maps.
- La solución implementada debe ser capaz de procesar el archivo “400000nombres.in”. 
-
-En un supermercado se mantiene una cola A con diversos clientes de los que s
-e conoce número de ubicación en la cola y cantidad de productos que lleva.
- Se abre una nueva cola B para clientes que llevan menos de 5 productos. 
- Usted debe dejar en la cola A los clientes que llevan más de 5 o hasta 5 
- productos en el orden en que estaban, y en la cola B los que compran menos
-  de 5 artículos, respetando el orden que tenían en la cola A. En ambas colas 
-  reasignar un nuevo número de ubicación.
-
-	 * 
-	 * **/
-	
+/*@method: obtener personas
+ * @param: string miarchivo
+ * el metodo recibe una cadena con el nombre de un archivo, lo lee y obtiene la lista de objetos persona en 
+ * el orden de dni, apellido, edad y los pone dentro de un linkedlist de tipo persona
+ * 
+ * */
 public static LinkedList <Persona> getPersona(String miArchivo) throws FileNotFoundException {
 		LinkedList<Persona> list=new LinkedList<Persona>();
 		File f=new File(miArchivo);
@@ -74,6 +38,12 @@ public static LinkedList <Persona> getPersona(String miArchivo) throws FileNotFo
 		return list;
 	}
 
+/*@method: obtener persona ordenada por dni
+ * @param: Linkedlist de tipo persona
+ * el metodo recibe una lista de tipo persona, la lee la ordena y luego las pone en una listaordenadas por dni
+ * esta misma lista es usada para generar el archivo, personasordenadas.out
+ * 
+ * */
 public static  LinkedList<Persona> getPersonaOrdenadoPorDni(LinkedList<Persona> list) throws IOException {
 	
 	LinkedList <Persona> ordenadasPorDni=new LinkedList <Persona>();
@@ -92,7 +62,9 @@ public static  LinkedList<Persona> getPersonaOrdenadoPorDni(LinkedList<Persona> 
 	
 }
 
-
+//metodo que ordena las personas por edad atravez de la clase ordearpersonasporedad que implementa comparator
+//recibe linkedlist, la ordena por edad, la pone en una nueva lista y la imprime en un archivo 
+//personasordenadasporedad
 public static  LinkedList<Persona> getPersonaOrdenadoPorEdad(LinkedList<Persona> list) throws IOException {
 	
 	LinkedList <Persona> ordenadasPorEdad=new LinkedList <Persona>();
@@ -113,11 +85,13 @@ public static  LinkedList<Persona> getPersonaOrdenadoPorEdad(LinkedList<Persona>
 	
 }
 
+//metodo que recibe una lista y un entero que corresponde a la edad. la recorre y si es mayor a la edad pasada
+//por parametro pone al objeto persona en una nueva lista mayores a edad.
+//luego imprime la nueva lista en un archivo mayoresaedad.out
+
 public static  LinkedList<Persona> getPersonasMayoresAedad(LinkedList<Persona> list, int edad) throws IOException {
-	
+
 	LinkedList <Persona> mayoresAedad=new LinkedList <Persona>();
-	
-	
 
 	for(Persona p : list) {
 		if(p.getEdad()>edad) {
@@ -133,6 +107,9 @@ public static  LinkedList<Persona> getPersonasMayoresAedad(LinkedList<Persona> l
 	return mayoresAedad;
 	
 }
+
+//metodo listarpersona. el mismo recibe una linkedlist previamente creada y un string con el nombre q
+//queremos que tenga el archivo de texto plano de salida.
 
 public static void listarPersona(LinkedList<Persona> list, String nombreArchivo) throws IOException{
 	//Metodo de escritura en un archivo
@@ -151,7 +128,44 @@ public static void listarPersona(LinkedList<Persona> list, String nombreArchivo)
 	
 }
 
+//recibe un archivo y atravez de dos map los recorre busca la cantidad de repetidos solicitada y despues
+//los mete en un archivo de salida llamado repetidos.out
+public static void descubrirNombresRepetidos(String miArchivo) throws IOException {
+	int cantNombres;
+	int cantRepetidos;
+	Map<String, Integer> nombres = new TreeMap<String, Integer>();
+	TreeMap< Integer,String> repetidos = new TreeMap<Integer,String>();
+
+	Scanner sc = new Scanner(new File(miArchivo));
+	cantNombres=sc.nextInt();
+	cantRepetidos=sc.nextInt();
+	for(int i=0;i<cantNombres;i++){
+		String nom = sc.next();
+		int cantidad=0;
+		if(nombres.containsKey(nom)){
+			cantidad = nombres.get(nom);
+			nombres.put(nom, cantidad+1);	
+		}				
+		else
+			nombres.put(nom, 1);	
+		
+	}
+
+	sc.close();
+
+	for (Entry<String, Integer> nombre : nombres.entrySet())
+		repetidos.put(nombre.getValue(), nombre.getKey());
+
+	PrintWriter s = new PrintWriter(new FileWriter("repetidos.out")); 
+
+	for(int k=1; k<=cantRepetidos;k++){
+		Entry<Integer,String> salida=repetidos.pollLastEntry();
+		s.println(salida.getValue()+" "+salida.getKey());
+	}
+	s.close();
+	
+}}
 
 
 
-}
+
